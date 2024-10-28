@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/portfolio-wpsites-WIP/static/css/main.8aa4ec68.css",
+    "main.js": "/portfolio-wpsites-WIP/static/js/main.fda8390b.js",
+    "index.html": "/portfolio-wpsites-WIP/index.html",
+    "main.8aa4ec68.css.map": "/portfolio-wpsites-WIP/static/css/main.8aa4ec68.css.map",
+    "main.fda8390b.js.map": "/portfolio-wpsites-WIP/static/js/main.fda8390b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8aa4ec68.css",
+    "static/js/main.fda8390b.js"
+  ]
+}
