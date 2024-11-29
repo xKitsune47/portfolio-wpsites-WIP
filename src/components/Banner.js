@@ -7,13 +7,7 @@ export default function Banner({
 }) {
     return (
         <div className="banner">
-            <h1>
-                {tabName === "main" && `${companyName}`}
-                {tabName === "projects" && "Projekty"}
-                {tabName === "offer" && "Oferta"}
-                {tabName === "about" && "O nas"}
-                {tabName === "contact" && "Kontakt"}
-            </h1>
+            <h1>{tabName || companyName}</h1>
         </div>
     );
 }

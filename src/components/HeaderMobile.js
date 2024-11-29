@@ -1,5 +1,4 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import Dropdown from "react-bootstrap/Dropdown";
 
 const placeholderLogo = (
     <svg
@@ -50,39 +49,45 @@ const placeholderLogo = (
     </svg>
 );
 
-export default function Header({ children }) {
+const headerStyle = {
+    display: "grid",
+    gridTemplateColumns: "50% 50%",
+    gridTemplateRows: "5rem",
+    width: "100%",
+};
+
+function HeaderMobile({ children }) {
     return (
-        <header className="header-computer">
-            <div className="header-element header-element--logo">
-                <NavLink to="/">{placeholderLogo}</NavLink>
-            </div>
+        <header style={headerStyle} className="header-mobile">
+            <div className="header-element">{placeholderLogo}</div>
             <div className="header-element">
-                <NavLink to="/projekty">
-                    <div className="header-nav-element">
-                        <span>Projekty</span>
-                    </div>
-                </NavLink>
-                <NavLink to="/oferta">
-                    <div className="header-nav-element">
-                        <span>Oferta</span>
-                    </div>
-                </NavLink>
-                <NavLink to="/co-przygotowac">
-                    <div className="header-nav-element">
-                        <span>Co przygotować?</span>
-                    </div>
-                </NavLink>
-                <NavLink to="/o-nas">
-                    <div className="header-nav-element">
-                        <span>O nas</span>
-                    </div>
-                </NavLink>
-                <NavLink to="/kontakt">
-                    <div className="header-nav-element">
-                        <span>Kontakt</span>
-                    </div>
-                </NavLink>
+                <Dropdown>
+                    <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            className="bi bi-list"
+                            viewBox="0 0 16 16">
+                            <path
+                                fillRule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                            />
+                        </svg>
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item>Strona główna</Dropdown.Item>
+                        <Dropdown.Item>Projekty</Dropdown.Item>
+                        <Dropdown.Item>Oferta</Dropdown.Item>
+                        <Dropdown.Item>O nas</Dropdown.Item>
+                        <Dropdown.Item>Kontakt</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
             </div>
         </header>
     );
 }
+
+export default HeaderMobile;

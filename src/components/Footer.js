@@ -1,40 +1,26 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-export default function Footer({ children, onChangeTab }) {
+export default function Footer({ children }) {
     return (
         <footer>
             <div className="footer-main">
                 <div className="footer-element">
-                    <span
-                        onClick={() => {
-                            onChangeTab("main");
-                        }}>
-                        Strona główna
-                    </span>
-                    <span
-                        onClick={() => {
-                            onChangeTab("projects");
-                        }}>
-                        Projekty
-                    </span>
-                    <span
-                        onClick={() => {
-                            onChangeTab("offer");
-                        }}>
-                        Oferta
-                    </span>
-                    <span
-                        onClick={() => {
-                            onChangeTab("about");
-                        }}>
-                        O nas
-                    </span>
-                    <span
-                        onClick={() => {
-                            onChangeTab("contact");
-                        }}>
-                        Kontakt
-                    </span>
+                    <NavLink to="/">
+                        <span>Strona główna</span>
+                    </NavLink>
+                    <NavLink to="/projekty">
+                        <span>Projekty</span>
+                    </NavLink>
+                    <NavLink to="/oferta">
+                        <span>Oferta</span>
+                    </NavLink>
+                    <NavLink to="/o-nas">
+                        <span>O nas</span>
+                    </NavLink>
+                    <NavLink to="/kontakt">
+                        <span>Kontakt</span>
+                    </NavLink>
                 </div>
             </div>
             <hr />

@@ -1,0 +1,287 @@
+@media only screen and (min-width: 1024px) {
+    .header-computer {
+        background-color: white;
+        position: fixed;
+        margin-top: 0px;
+        z-index: 99;
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 5rem;
+        width: 100%;
+    }
+
+    .header-element {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .header-mobile {
+        display: none;
+    }
+
+    .header-element--logo {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .header-nav-element {
+        font-size: 1.5rem;
+        vertical-align: middle;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(
+            var(--light-green),
+            var(--light-green)
+        );
+
+        span {
+            text-align: center;
+            width: 100%;
+        }
+
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+    }
+
+    .header-nav-element:hover {
+        background-size: 100% 100%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 30rem;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        background: linear-gradient(
+            -45deg,
+            var(--dark-green),
+            var(--light-green),
+            var(--dark-green),
+            var(--light-green)
+        );
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+
+        h1 {
+            margin-left: 10rem;
+        }
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .carousel-custom {
+        text-align: center;
+        padding: 1rem 0;
+
+        img {
+            width: 80%;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            transition: 0.3s all;
+            -webkit-transition: 0.3s all;
+            -moz-transition: 0.3s all;
+            -ms-transition: 0.3s all;
+            -o-transition: 0.3s all;
+        }
+
+        li:hover {
+            transform: scale(1.02);
+            -webkit-transform: scale(1.02);
+            -moz-transform: scale(1.02);
+            -ms-transform: scale(1.02);
+            -o-transform: scale(1.02);
+        }
+
+        p {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    .projects-brief-description {
+        text-align: center;
+        margin: 5rem 0;
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .projects-box {
+        margin-bottom: 5rem;
+    }
+
+    .offer-container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .pricing {
+        padding: 3rem 0;
+        margin: auto;
+    }
+
+    .pricing-box {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+        gap: 1rem;
+    }
+
+    .pricing-box:has(:only-child) {
+        grid-template-columns: 400px;
+        justify-content: center;
+    }
+
+    .pricing-box:has(:nth-child(3):last-child) {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        justify-content: center;
+    }
+
+    .price-card {
+        min-width: 400px;
+        margin: auto;
+    }
+
+    .btn-buy {
+        padding: 0.75rem;
+    }
+
+    .accordions {
+        padding: 3rem 0;
+        width: 50%;
+        margin: auto;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .accordion-header {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .accordion-details {
+        font-size: 1.1rem;
+    }
+
+    .about-container-details {
+        max-width: 100%;
+        height: fit-content;
+        padding: 5rem 20rem 5rem 20rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-container-details--element {
+        color: black;
+    }
+
+    .about-container-details--img {
+        width: 40rem;
+    }
+
+    .devs-box {
+        display: grid;
+        width: 100%;
+        margin: auto;
+        min-height: 50vh;
+        height: fit-content;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 5rem 1fr;
+        background: linear-gradient(
+            130deg,
+            rgba(47, 103, 94, 1) 25%,
+            rgba(89, 201, 165, 1) 100%
+        );
+    }
+
+    .devs-box__title {
+        text-align: center;
+        color: #ffffff;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 2;
+        grid-column-end: 3;
+    }
+
+    .single-dev {
+        min-height: 450px;
+        height: fit-content;
+        margin: 4rem;
+        padding: 2rem;
+        text-align: center;
+        background: #ffffff;
+
+        img {
+            height: 20vh;
+        }
+    }
+
+    .contact-box {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 5rem 0;
+    }
+
+    footer {
+        height: 10rem;
+        clear: both;
+        position: relative;
+        margin-bottom: 0px;
+        background-color: white;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-element {
+        text-align: center;
+        padding: 2rem;
+
+        span {
+            padding: 0.4rem;
+            cursor: pointer;
+
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+        }
+
+        span:hover {
+            color: var(--light-green);
+        }
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}

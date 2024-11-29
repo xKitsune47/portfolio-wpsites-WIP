@@ -1,86 +1,43 @@
-import "./App.css";
-import { useState } from "react";
-import Header from "./components/Header";
-import Banner from "./components/Banner";
-import Projects from "./components/Projects";
-import Offer from "./components/Offer";
-import AboutUs from "./components/AboutUs";
-import ContactBox from "./components/ContactBox";
-import Footer from "./components/Footer";
+import "./styles/App.css";
+import "./styles/computer.css";
+import "./styles/mobile.css";
+import { offers } from "./variables";
+import { devs } from "./variables";
+import { projects } from "./variables";
+import { faq } from "./variables";
+import { prepare } from "./variables";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const placeholderText =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie odio interdum volutpat feugiat. Praesent sed nisl vel neque pellentesque convallis vitae at neque. Cras imperdiet massa eu lobortis efficitur. Suspendisse potenti. Aenean non nibh scelerisque, cursus dolor nec, vehicula orci. Vivamus blandit velit quis sem imperdiet feugiat.";
-
-const placeholderProjectImage =
-    "https://kep.cdn.index.hu/1/0/5611/56118/561184/56118487_9913ecfec23e5b64d1e256573d280a0f_wm.jpg";
-
-const placeholderDevImage =
-    "https://www.strasys.uk/wp-content/uploads/2022/02/Depositphotos_484354208_S.jpg";
-
-const devs = [
-    {
-        name: "Franciszek Cybruch",
-        description: placeholderText,
-        image: placeholderDevImage,
-    },
-    {
-        name: "Jakub Turowski",
-        description: placeholderText,
-        image: placeholderDevImage,
-    },
-];
-
-const projects = [
-    {
-        image: placeholderProjectImage,
-        text: placeholderText,
-        title: "Project Title1",
-    },
-    {
-        image: placeholderProjectImage,
-        text: placeholderText,
-        title: "Project Title2",
-    },
-    {
-        image: placeholderProjectImage,
-        text: placeholderText,
-        title: "Project Title3",
-    },
-];
-
-const offers = [
-    {
-        title: "Nazwa usługi",
-        price: "99,99 zł",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie odio interdum volutpat feugiat. Praesent sed nisl vel neque pellentesque convallis vitae at neque. Cras imperdiet massa eu lobortis efficitur. Suspendisse potenti. Aenean non nibh scelerisque, cursus dolor nec, vehicula orci. Vivamus blandit velit quis sem imperdiet feugiat.",
-    },
-];
+// components
+import Offer from "./pages/Offer";
+import { Homepage } from "./pages/Homepage";
+import AboutUs from "./pages/AboutUs";
+import Projects from "./pages/Projects";
+import { Contact } from "./pages/Contact";
+import Prepare from "./pages/Prepare";
 
 export default function App() {
-    const [curTab, setCurTab] = useState("main");
-
-    function handleClick(tab) {
-        setCurTab(tab);
-        return;
-    }
-
     return (
         <div className="App">
-            <Header onChangeTab={handleClick}></Header>
-            <Banner tabName={curTab}></Banner>
-            {curTab === "main" && <p>{curTab}</p>}
-            {curTab === "projects" && <Projects projects={projects} />}
-            {curTab === "offer" && <Offer offers={offers}></Offer>}
-            {curTab === "about" && <AboutUs devs={devs} />}
-            {curTab === "contact" && <p>{curTab}</p>}
-            <ContactBox
-                onClick={handleClick}
-                btnText={"Skontaktuj się z nami!"}
-                question={"Masz do nas pytanie?"}
-                tab={"contact"}
-            />
-            <Footer onChangeTab={handleClick}></Footer>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Homepage />} />
+                    <Route
+                        path="/projekty"
+                        element={<Projects projects={projects()} />}
+                    />
+                    <Route
+                        path="/oferta"
+                        element={<Offer offers={offers()} faq={faq()} />}
+                    />
+                    <Route
+                        path="/co-przygotowac"
+                        element={<Prepare prepare={prepare} />}
+                    />
+                    <Route path="/o-nas" element={<AboutUs devs={devs()} />} />
+                    <Route path="/kontakt" element={<Contact />} />
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }
@@ -105,3 +62,35 @@ export default function App() {
 // - kontakt
 // box z przyciskiem do zakladki kontakt
 // footer
+
+// glowna:
+// oferta (skrocona - kafelki)
+// wywalic z headera
+
+// co przygotowac:
+// dac zamiast glownej w headerze
+// lista z checkmarkami
+// formularz podstawowy
+
+// projekty:
+// karuzela zamiast kafelkow, jeden zawsze z przodu, po bokach po jednym kafelku wylaniajacym sie zza glownego.
+// po kliknieciu kafelek powieksza sie i pokazuje wiecej informacji nt. projektu
+// https://www.npmjs.com/package/react-slideshow-image
+
+// DONEDONEDONEDONEDONEDONEDONEDONEDONEDONEDONEDONE
+// oferta:
+// 3 tiery oferty (jak subskrypcje)
+// najczesciej zadawane pytania (format akordeonu)
+// DONEDONEDONEDONEDONEDONEDONEDONEDONEDONEDONEDONE
+
+// kontakt:
+// formularz podstawowy
+
+// ---------------------------------
+
+// formularz podstawowy:
+// imie i nazwisko/nazwa firmy
+// mail kontaktowy
+// tresc
+
+// DOKUMENT LH: 14, 17, 26, 30, 32, 37, 38, 62, 67, 70

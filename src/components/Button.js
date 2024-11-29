@@ -1,11 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-export default function Button({ children, text, onClick, tab, customClass }) {
+export default function Button({ children, text, tab, customClass }) {
     return (
-        <button
-            className={`btn ${customClass}`}
-            onClick={() => onClick(`${tab}`)}>
-            {text}
-        </button>
+        <NavLink to={`/${tab}`}>
+            <button className={`btn ${customClass}`}>{text}</button>
+        </NavLink>
     );
 }
