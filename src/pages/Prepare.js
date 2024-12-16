@@ -2,8 +2,9 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import ContactBox from "../components/ContactBox";
 import Footer from "../components/Footer";
+import { prepare } from "../variables";
 
-function Prepare() {
+function Prepare({ prepareList = prepare() }) {
     return (
         <>
             <Header />

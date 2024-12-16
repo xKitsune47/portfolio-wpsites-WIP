@@ -1,26 +1,13 @@
-import PropTypes from "prop-types";
-import Button from "./Button";
+import { projects } from "../variables";
 
 // carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const placeholderImage =
-    "https://kep.cdn.index.hu/1/0/5611/56118/561184/56118487_9913ecfec23e5b64d1e256573d280a0f_wm.jpg";
-
-const placeholderText =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie odio interdum volutpat feugiat. Praesent sed nisl vel neque pellentesque convallis vitae at neque. Cras imperdiet massa eu lobortis efficitur. Suspendisse potenti. Aenean non nibh scelerisque, cursus dolor nec, vehicula orci. Vivamus blandit velit quis sem imperdiet feugiat.";
-
-const placeholderProjects = [
-    { image: placeholderImage, text: placeholderText, title: "Project Title1" },
-    { image: placeholderImage, text: placeholderText, title: "Project Title2" },
-    { image: placeholderImage, text: placeholderText, title: "Project Title3" },
-];
-
 export default function ProjectBox({
     children,
     width = 20,
-    projects = placeholderProjects,
+    projectsList = projects(),
     textColor = "white",
     containerPadding = 2,
     className = "project-container",
@@ -83,10 +70,17 @@ export default function ProjectBox({
                 sliderClass=""
                 slidesToSlide={1}
                 swipeable>
-                {projects.map((item) => {
+                {projectsList.map((item) => {
                     return (
-                        <a href={item.link} className="singe-project">
-                            <img src={placeholderImage} alt={item.title} />
+                        <a
+                            href={item.link}
+                            className="singe-project"
+                            key={item.title}>
+                            <img
+                                src={item.image}
+                                alt={item.title}
+                                lazy-load="true"
+                            />
                             <h3>{item.title}</h3>
                             <p>{item.text}</p>
                         </a>

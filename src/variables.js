@@ -42,7 +42,7 @@ function devs() {
 function offers() {
     return [
         {
-            title: "Nazwa usługi",
+            title: "Nazwa usługi 1",
             price: "99,99 zł",
             description: [
                 "Lorem ipsum dolor sit amet",
@@ -51,7 +51,7 @@ function offers() {
             ],
         },
         {
-            title: "Nazwa usługi",
+            title: "Nazwa usługi 2",
             price: "99,99 zł",
             description: [
                 "Lorem ipsum dolor sit amet",
@@ -60,7 +60,7 @@ function offers() {
             ],
         },
         {
-            title: "Nazwa usługi",
+            title: "Nazwa usługi 3",
             price: "99,99 zł",
             description: [
                 "Lorem ipsum dolor sit amet",
@@ -94,16 +94,16 @@ function projects() {
     ];
 }
 
-function prepare() {
-    return [];
-}
-
 function aboutBanner() {
     return {
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat esse sit quas pariatur recusandae earum, et atque officia deserunt, labore, voluptatibus dolorum quidem. Praesentium, neque vitae necessitatibus et exercitationem",
         image: "https://plus.unsplash.com/premium_photo-1661416307260-5013ab7adc3f?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     };
+}
+
+function prepare() {
+    return [];
 }
 
 export { faq, projects, devs, offers, prepare, aboutBanner };

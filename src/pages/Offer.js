@@ -6,6 +6,8 @@ import ContactBox from "../components/ContactBox";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import Button from "../components/Button";
+import { offers } from "../variables";
+import { faq } from "../variables";
 
 // joy mui for all
 import Box from "@mui/joy/Box";
@@ -24,29 +26,10 @@ import Divider from "@mui/joy/Divider";
 import List from "@mui/joy/List";
 import ListItem from "@mui/joy/ListItem";
 
-const placeholderOffers = [
-    {
-        title: "Nazwa usługi",
-        price: "99,99 zł",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie odio interdum volutpat feugiat. Praesent sed nisl vel neque pellentesque convallis vitae at neque. Cras imperdiet massa eu lobortis efficitur. Suspendisse potenti. Aenean non nibh scelerisque, cursus dolor nec, vehicula orci. Vivamus blandit velit quis sem imperdiet feugiat.",
-    },
-];
-const placeholderFaq = [
-    {
-        question: "question 1",
-        answer: "answer1",
-    },
-    {
-        question: "question 2",
-        answer: "answer2",
-    },
-];
-
 export default function Offer({
     children,
-    offers = placeholderOffers,
-    faq = placeholderFaq,
+    offersList = offers(),
+    faqList = faq(),
 }) {
     const [index, setIndex] = useState(null);
 
@@ -57,12 +40,13 @@ export default function Offer({
             <div className="offer-container">
                 <div className="pricing">
                     <Box className="pricing-box">
-                        {offers.map((offer) => {
+                        {offersList.map((offer) => {
                             return (
                                 <Card
                                     size="lg"
                                     variant="outlined"
-                                    className="price-card">
+                                    className="price-card"
+                                    key={offer.title}>
                                     <Typography level="h2">
                                         {offer.title}
                                     </Typography>
@@ -73,7 +57,12 @@ export default function Offer({
                                             mx: "calc(-1 * var(--ListItem-paddingX))",
                                         }}>
                                         {offer.description.map((item) => {
-                                            return <ListItem>{item}</ListItem>;
+                                            return (
+                                                <ListItem
+                                                    key={item.slice(0, 10)}>
+                                                    {item}
+                                                </ListItem>
+                                            );
                                         })}
                                     </List>
                                     <Divider inset="none" />
@@ -97,9 +86,10 @@ export default function Offer({
                 <div className="accordions">
                     <h2>Często zadawane pytania</h2>
                     <AccordionGroup>
-                        {faq.map((elem, i) => {
+                        {faqList.map((elem, i) => {
                             return (
                                 <Accordion
+                                    key={elem.question.slice(0, 10)}
                                     expanded={index === i}
                                     onChange={(event, expanded) => {
                                         setIndex(expanded ? i : null);
@@ -122,7 +112,7 @@ export default function Offer({
                 question={"Nie znalazłeś/aś odpowiedzi?"}
                 tab={"Kontakt"}
             />
-            <Footer></Footer>
+            <Footer />
         </>
     );
 }

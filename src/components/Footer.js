@@ -15,8 +15,11 @@ export default function Footer({ children }) {
                     <NavLink to="/oferta">
                         <span>Oferta</span>
                     </NavLink>
-                    <NavLink to="/o-nas">
+                    {/* <NavLink to="/o-nas">
                         <span>O nas</span>
+                    </NavLink> */}
+                    <NavLink to="/co-przygotowac">
+                        <span>Co przygotować?</span>
                     </NavLink>
                     <NavLink to="/kontakt">
                         <span>Kontakt</span>
@@ -25,7 +28,7 @@ export default function Footer({ children }) {
             </div>
             <hr />
             <div className="copyright">
-                <p>© 2024 Franciszek Cybruch</p>
+                <p>© {new Date().getFullYear()} Franciszek Cybruch</p>
             </div>
         </footer>
     );

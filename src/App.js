@@ -1,17 +1,13 @@
 import "./styles/App.css";
 import "./styles/computer.css";
 import "./styles/mobile.css";
-import { offers } from "./variables";
-import { devs } from "./variables";
-import { projects } from "./variables";
-import { faq } from "./variables";
-import { prepare } from "./variables";
+// import { devs } from "./variables";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // components
 import Offer from "./pages/Offer";
 import { Homepage } from "./pages/Homepage";
-import AboutUs from "./pages/AboutUs";
+// import AboutUs from "./pages/AboutUs";
 import Projects from "./pages/Projects";
 import { Contact } from "./pages/Contact";
 import Prepare from "./pages/Prepare";
@@ -22,19 +18,11 @@ export default function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Homepage />} />
-                    <Route
-                        path="/projekty"
-                        element={<Projects projects={projects()} />}
-                    />
-                    <Route
-                        path="/oferta"
-                        element={<Offer offers={offers()} faq={faq()} />}
-                    />
-                    <Route
-                        path="/co-przygotowac"
-                        element={<Prepare prepare={prepare} />}
-                    />
-                    <Route path="/o-nas" element={<AboutUs devs={devs()} />} />
+                    <Route index element={<Homepage />} />
+                    <Route path="/projekty" element={<Projects />} />
+                    <Route path="/oferta" element={<Offer />} />
+                    <Route path="/co-przygotowac" element={<Prepare />} />
+                    {/* <Route path="/o-nas" element={<AboutUs devs={devs()} />} /> */}
                     <Route path="/kontakt" element={<Contact />} />
                 </Routes>
             </BrowserRouter>
@@ -58,7 +46,7 @@ export default function App() {
 // - main
 // - projekty
 // - oferta
-// - o nas
+// - co przygotowac
 // - kontakt
 // box z przyciskiem do zakladki kontakt
 // footer

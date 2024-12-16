@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 
-export default function Projects({ children, projects }) {
+export default function Projects({ children }) {
     return (
         <>
             <Header />
@@ -17,7 +17,7 @@ export default function Projects({ children, projects }) {
                         Państwu jako wzór.
                     </h3>
                 </div>
-                <ProjectBox projects={projects} />
+                <ProjectBox />
             </div>
             <ContactBox
                 btnText={"Skontaktuj się z nami!"}

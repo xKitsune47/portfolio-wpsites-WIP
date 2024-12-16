@@ -72,11 +72,11 @@ export default function Header({ children }) {
                         <span>Co przygotować?</span>
                     </div>
                 </NavLink>
-                <NavLink to="/o-nas">
+                {/* <NavLink to="/o-nas">
                     <div className="header-nav-element">
                         <span>O nas</span>
                     </div>
-                </NavLink>
+                </NavLink> */}
                 <NavLink to="/kontakt">
                     <div className="header-nav-element">
                         <span>Kontakt</span>
