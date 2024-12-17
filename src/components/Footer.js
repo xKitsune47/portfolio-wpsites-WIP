@@ -6,22 +6,22 @@ export default function Footer({ children }) {
         <footer>
             <div className="footer-main">
                 <div className="footer-element">
-                    <NavLink to="/">
+                    <NavLink to="/portfolio-wpsites-WIP/">
                         <span>Strona główna</span>
                     </NavLink>
-                    <NavLink to="/projekty">
+                    <NavLink to="/portfolio-wpsites-WIP/projekty">
                         <span>Projekty</span>
                     </NavLink>
-                    <NavLink to="/oferta">
+                    <NavLink to="/portfolio-wpsites-WIP/oferta">
                         <span>Oferta</span>
                     </NavLink>
                     {/* <NavLink to="/o-nas">
                         <span>O nas</span>
                     </NavLink> */}
-                    <NavLink to="/co-przygotowac">
+                    <NavLink to="/portfolio-wpsites-WIP/co-przygotowac">
                         <span>Co przygotować?</span>
                     </NavLink>
-                    <NavLink to="/kontakt">
+                    <NavLink to="/portfolio-wpsites-WIP/kontakt">
                         <span>Kontakt</span>
                     </NavLink>
                 </div>

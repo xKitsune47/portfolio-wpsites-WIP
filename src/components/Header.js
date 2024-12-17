@@ -54,20 +54,22 @@ export default function Header({ children }) {
     return (
         <header className="header-computer">
             <div className="header-element header-element--logo">
-                <NavLink to="/">{placeholderLogo}</NavLink>
+                <NavLink to="/portfolio-wpsites-WIP/">
+                    {placeholderLogo}
+                </NavLink>
             </div>
             <div className="header-element">
-                <NavLink to="/projekty">
+                <NavLink to="/portfolio-wpsites-WIP/projekty">
                     <div className="header-nav-element">
                         <span>Projekty</span>
                     </div>
                 </NavLink>
-                <NavLink to="/oferta">
+                <NavLink to="/portfolio-wpsites-WIP/oferta">
                     <div className="header-nav-element">
                         <span>Oferta</span>
                     </div>
                 </NavLink>
-                <NavLink to="/co-przygotowac">
+                <NavLink to="/portfolio-wpsites-WIP/co-przygotowac">
                     <div className="header-nav-element">
                         <span>Co przygotować?</span>
                     </div>
@@ -77,7 +79,7 @@ export default function Header({ children }) {
                         <span>O nas</span>
                     </div>
                 </NavLink> */}
-                <NavLink to="/kontakt">
+                <NavLink to="/portfolio-wpsites-WIP/kontakt">
                     <div className="header-nav-element">
                         <span>Kontakt</span>
                     </div>

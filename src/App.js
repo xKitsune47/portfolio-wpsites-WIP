@@ -17,13 +17,28 @@ export default function App() {
         <div className="App">
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Homepage />} />
+                    <Route
+                        path="/portfolio-wpsites-WIP/"
+                        element={<Homepage />}
+                    />
                     <Route index element={<Homepage />} />
-                    <Route path="/projekty" element={<Projects />} />
-                    <Route path="/oferta" element={<Offer />} />
-                    <Route path="/co-przygotowac" element={<Prepare />} />
+                    <Route
+                        path="/portfolio-wpsites-WIP/projekty"
+                        element={<Projects />}
+                    />
+                    <Route
+                        path="/portfolio-wpsites-WIP/oferta"
+                        element={<Offer />}
+                    />
+                    <Route
+                        path="/portfolio-wpsites-WIP/co-przygotowac"
+                        element={<Prepare />}
+                    />
                     {/* <Route path="/o-nas" element={<AboutUs devs={devs()} />} /> */}
-                    <Route path="/kontakt" element={<Contact />} />
+                    <Route
+                        path="/portfolio-wpsites-WIP/kontakt"
+                        element={<Contact />}
+                    />
                 </Routes>
             </BrowserRouter>
         </div>
