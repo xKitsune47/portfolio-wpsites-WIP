@@ -21,7 +21,7 @@ export const Homepage = ({ children }) => {
                 question={"Masz do nas pytanie?"}
                 tab={"Kontakt"}
             />
-            <Footer></Footer>
+            <Footer />
         </>
     );
 };
