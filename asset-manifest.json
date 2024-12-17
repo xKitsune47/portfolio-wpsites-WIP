@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d5fab28.css",
-    "main.js": "/static/js/main.9bee28c4.js",
-    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
-    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
-    "index.html": "/index.html",
-    "main.0d5fab28.css.map": "/static/css/main.0d5fab28.css.map",
-    "main.9bee28c4.js.map": "/static/js/main.9bee28c4.js.map"
+    "main.css": "/portfolio-wpsites-WIP/static/css/main.f4ed4b9b.css",
+    "main.js": "/portfolio-wpsites-WIP/static/js/main.9aff6a0d.js",
+    "static/media/revicons.eot": "/portfolio-wpsites-WIP/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/portfolio-wpsites-WIP/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/portfolio-wpsites-WIP/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/portfolio-wpsites-WIP/index.html",
+    "main.f4ed4b9b.css.map": "/portfolio-wpsites-WIP/static/css/main.f4ed4b9b.css.map",
+    "main.9aff6a0d.js.map": "/portfolio-wpsites-WIP/static/js/main.9aff6a0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d5fab28.css",
-    "static/js/main.9bee28c4.js"
+    "static/css/main.f4ed4b9b.css",
+    "static/js/main.9aff6a0d.js"
   ]
 }
